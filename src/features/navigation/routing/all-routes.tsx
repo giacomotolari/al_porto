@@ -4,8 +4,6 @@ import Book from "../../../pages/Book";
 import Favorites from "../../../pages/Favorites";
 import About from "../../../pages/About";
 import { paths } from "./paths";
-import path from "path";
-import NotFound from "../../../pages/NotFound";
 
 interface PublicRoute {
   path: string;
@@ -36,7 +34,6 @@ const routes: Route[] = [
     path: paths.about,
     component: About,
   },
-  { path: paths.notFound, component: NotFound },
 ];
 
 export { routes, type Route, type PublicRoute, type ProtectedRoute };
