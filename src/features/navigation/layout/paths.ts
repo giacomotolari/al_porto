@@ -15,3 +15,5 @@ const paths: Paths = {
   about: "/about",
   notFound: "/404",
 };
+
+export { paths, type Paths };
