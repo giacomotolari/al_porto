@@ -18,4 +18,6 @@ const paths: Paths = {
 
 const pathsList = Object.values(paths);
 
-export { paths, pathsList, type Paths };
+const pathNotExists = (path: string) => !pathsList.includes(path) && path !== "*";
+
+export { paths, pathsList, pathNotExists, type Paths };
