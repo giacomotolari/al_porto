@@ -12,7 +12,7 @@ import {
 import { book, bookmark, heart, home, informationCircle } from "ionicons/icons";
 import { useLocation } from "react-router-dom";
 import "./Menu.css";
-import { paths } from "../features/navigation/layout/routing/paths";
+import { paths } from "../features/navigation/routing/paths";
 
 interface AppPage {
   title: string;
