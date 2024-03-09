@@ -21,6 +21,10 @@ type Route = PublicRoute | ProtectedRoute;
 
 const routes: Route[] = [
   {
+    path: paths.notFound,
+    component: NotFound,
+  },
+  {
     path: paths.home,
     component: Home,
   },
@@ -39,10 +43,6 @@ const routes: Route[] = [
   {
     path: paths.about,
     component: About,
-  },
-  {
-    path: paths.notFound,
-    component: NotFound,
   },
 ];
 

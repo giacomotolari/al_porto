@@ -5,7 +5,7 @@ export default function Routes() {
   return (
     <>
       {routes.map((route) => (
-        <Route key={route.path} {...route} />
+        <Route key={route.path} {...route} exact />
       ))}
     </>
   );

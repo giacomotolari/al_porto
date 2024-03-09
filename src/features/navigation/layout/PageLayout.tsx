@@ -9,20 +9,22 @@ import {
 } from "@ionic/react";
 import { ReactNode } from "react";
 import { useLocation } from "react-router";
+import { pathNotExists } from "../routing/paths";
+import { pages } from "../../../pages/pages";
 
 interface PageLayoutProps {
   children: ReactNode;
 }
 
-export default function PageLayout({
-  children,
-}: PageLayoutProps) {
+export default function PageLayout({ children }: PageLayoutProps) {
   const { pathname } = useLocation<{ name: string }>();
 
   const getTitle = () => {
-    switch (pathname) {
-      case "/":
-        return "Home";
+    switch (true) {
+      case pathname === "/":
+        return pages.home;
+      case pathNotExists(pathname):
+        return pages.notFound;
       default:
         return pathname.charAt(1).toUpperCase() + pathname.slice(2);
     }
