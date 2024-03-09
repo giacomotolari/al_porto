@@ -9,10 +9,10 @@ import {
   IonMenuToggle,
   IonNote,
 } from "@ionic/react";
-import { book, bookmark, heart, home } from "ionicons/icons";
+import { book, bookmark, heart, home, informationCircle } from "ionicons/icons";
 import { useLocation } from "react-router-dom";
 import "./Menu.css";
-import { paths } from "../features/navigation/layout/paths";
+import { paths } from "../features/navigation/layout/routing/paths";
 
 interface AppPage {
   title: string;
@@ -38,8 +38,13 @@ const appPages: AppPage[] = [
   },
   {
     title: "Bookmark",
-    url: paths.about,
+    url: paths.book,
     icon: bookmark,
+  },
+  {
+    title: "About",
+    url: paths.about,
+    icon: informationCircle,
   },
 ];
 
