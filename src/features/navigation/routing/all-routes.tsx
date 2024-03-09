@@ -5,6 +5,7 @@ import Favorites from "../../../pages/Favorites";
 import Bookmarks from "../../../pages/Bookmarks";
 import About from "../../../pages/About";
 import { paths } from "./paths";
+import NotFound from "../../../pages/NotFound";
 
 interface PublicRoute {
   path: string;
@@ -38,6 +39,10 @@ const routes: Route[] = [
   {
     path: paths.about,
     component: About,
+  },
+  {
+    path: paths.notFound,
+    component: NotFound,
   },
 ];
 
