@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'ionic.ionicalporto',
-  appName: 'ionicalporto',
+  appId: 'ionic.al_porto',
+  appName: 'al_porto',
   webDir: 'dist',
   server: {
     androidScheme: 'https'

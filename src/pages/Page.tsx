@@ -1,10 +1,21 @@
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import { useParams } from 'react-router';
-import './Page.css';
+import {
+  IonButtons,
+  IonContent,
+  IonHeader,
+  IonMenuButton,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/react";
+import { useLocation } from "react-router";
+import "./Page.css";
 
 const Page: React.FC = () => {
-
-  const { name } = useParams<{ name: string; }>();
+  const { pathname } = useLocation<{ name: string }>();
+  const title =
+    pathname === "/"
+      ? "Home"
+      : pathname.charAt(1).toUpperCase() + pathname.slice(2);
 
   return (
     <IonPage>
@@ -13,14 +24,13 @@ const Page: React.FC = () => {
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>{name}</IonTitle>
+          <IonTitle>{title}</IonTitle>
         </IonToolbar>
       </IonHeader>
-
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">{name}</IonTitle>
+            <IonTitle size="large">{title}</IonTitle>
           </IonToolbar>
         </IonHeader>
       </IonContent>
