@@ -2,6 +2,7 @@ import { FC } from "react";
 import Home from "../../../pages/Home";
 import Book from "../../../pages/Book";
 import Favorites from "../../../pages/Favorites";
+import Bookmarks from "../../../pages/Bookmarks";
 import About from "../../../pages/About";
 import { paths } from "./paths";
 
@@ -25,6 +26,10 @@ const routes: Route[] = [
   {
     path: paths.book,
     component: Book,
+  },
+  {
+    path: paths.bookmarks,
+    component: Bookmarks,
   },
   {
     path: paths.favorites,

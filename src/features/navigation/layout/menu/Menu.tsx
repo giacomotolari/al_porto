@@ -12,7 +12,7 @@ import {
 import { book, bookmark, heart, home, informationCircle } from "ionicons/icons";
 import { useLocation } from "react-router-dom";
 import "./Menu.css";
-import { paths } from "../features/navigation/routing/paths";
+import { paths } from "../../routing/paths";
 
 interface AppPage {
   title: string;
@@ -37,8 +37,8 @@ const appPages: AppPage[] = [
     icon: heart,
   },
   {
-    title: "Bookmark",
-    url: paths.book,
+    title: "Bookmarks",
+    url: paths.bookmarks,
     icon: bookmark,
   },
   {

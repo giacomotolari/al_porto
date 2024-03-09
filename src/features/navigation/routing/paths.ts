@@ -1,15 +1,17 @@
 interface Paths {
-  home: string;
-  book: string;
-  favorites: string;
-  about: string;
-  notFound: string;
+  home: "/";
+  book: "/book";
+  favorites: "/favorites";
+  bookmarks: "/bookmarks";
+  about: "/about";
+  notFound: "*";
 }
 
 const paths: Paths = {
   home: "/",
   book: "/book",
   favorites: "/favorites",
+  bookmarks: "/bookmarks",
   about: "/about",
   notFound: "*",
 };

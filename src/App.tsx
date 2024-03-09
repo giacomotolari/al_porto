@@ -6,7 +6,7 @@ import {
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import { Redirect, Route } from "react-router-dom";
-import Menu from "./components/Menu";
+import Menu from "./features/navigation/layout/menu/Menu";
 import Home from "./pages/Home";
 import Book from "./pages/Book";
 import Favorites from "./pages/Favorites";
@@ -30,31 +30,14 @@ import "@ionic/react/css/display.css";
 
 /* Theme variables */
 import "./theme/variables.css";
+import Layout from "./features/navigation/layout/Layout";
 
 setupIonicReact();
 
 const App: React.FC = () => {
   return (
     <IonApp>
-      <IonReactRouter>
-        <IonSplitPane contentId="main">
-          <Menu />
-          <IonRouterOutlet id="main">
-            <Route path="/book" exact={true}>
-              <Book />
-            </Route>
-            <Route path="/favorites" exact={true}>
-              <Favorites />
-            </Route>
-            <Route path="/about" exact={true}>
-              <About />
-            </Route>
-            <Route path="/" exact={true}>
-              <Home />
-            </Route>
-          </IonRouterOutlet>
-        </IonSplitPane>
-      </IonReactRouter>
+     <Layout />
     </IonApp>
   );
 };

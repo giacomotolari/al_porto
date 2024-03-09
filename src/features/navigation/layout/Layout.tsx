@@ -1,6 +1,6 @@
 import { IonRouterOutlet, IonSplitPane } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
-import Menu from "../../../components/Menu";
+import Menu from "./menu/Menu";
 import Routes from "../routing/Routes";
 
 export default function Layout() {
