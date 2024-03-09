@@ -16,4 +16,6 @@ const paths: Paths = {
   notFound: "*",
 };
 
-export { paths, type Paths };
+const pathsList = Object.values(paths);
+
+export { paths, pathsList, type Paths };
