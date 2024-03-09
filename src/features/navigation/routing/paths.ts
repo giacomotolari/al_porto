@@ -11,7 +11,7 @@ const paths: Paths = {
   book: "/book",
   favorites: "/favorites",
   about: "/about",
-  notFound: "/404",
+  notFound: "*",
 };
 
 export { paths, type Paths };

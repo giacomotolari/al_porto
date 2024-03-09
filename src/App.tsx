@@ -5,7 +5,7 @@ import {
   setupIonicReact,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
-import { Route } from "react-router-dom";
+import { Redirect, Route } from "react-router-dom";
 import Menu from "./components/Menu";
 import Home from "./pages/Home";
 import Book from "./pages/Book";
