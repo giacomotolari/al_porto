@@ -37,7 +37,7 @@ const appPages: AppPage[] = [
   },
   {
     title: "Bookmark",
-    url: "/bookmark",
+    url: "/book",
     icon: bookmark,
   },
 ];

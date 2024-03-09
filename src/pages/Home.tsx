@@ -8,14 +8,20 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import { useLocation } from "react-router";
-import "./Page.css";
 
 const Page: React.FC = () => {
   const { pathname } = useLocation<{ name: string }>();
-  const title =
-    pathname === "/"
-      ? "Home"
-      : pathname.charAt(1).toUpperCase() + pathname.slice(2);
+
+  const getTitle = () => {
+    switch (pathname) {
+      case "/":
+        return "Home";
+      default:
+        return pathname.charAt(1).toUpperCase() + pathname.slice(2);
+    }
+  };
+
+  const title = getTitle();
 
   return (
     <IonPage>
