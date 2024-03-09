@@ -1,5 +1,7 @@
 {
-  "name": "ionic",
-  "integrations": {},
-  "type": "react"
+  "name": "ionicalporto",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
 }
