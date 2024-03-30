@@ -10,6 +10,7 @@ import NotFound from "../../../pages/NotFound";
 interface PublicRoute {
   path: string;
   component: FC;
+  nestedRoutes?: Route[];
 }
 
 interface ProtectedRoute extends PublicRoute {
