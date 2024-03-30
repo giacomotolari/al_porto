@@ -42,7 +42,7 @@ export default function PageLayout({ children }: PageLayoutProps) {
           <IonTitle>{title}</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
+      <IonContent fullscreen >
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">{title}</IonTitle>
