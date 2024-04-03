@@ -1,5 +1,5 @@
 import { useHistory } from "react-router";
-import { paths } from "../routing/paths";
+import { paths } from "../navigation/routing/paths";
 import "./book_3D.scss";
 
 export default function Book3D() {
