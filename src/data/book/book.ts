@@ -1,6 +1,6 @@
 import diAcque from "./di_acque.json";
-import DiAmori from "./di_amori.json";
-import DiTerre from "./di_terre.json";
+import diAmori from "./di_amori.json";
+import diTerre from "./di_terre.json";
 import indice from "./indice.json";
 import postfazione from "./postfazione.json";
 
@@ -11,9 +11,9 @@ export interface Page {
     | "indice"
     | "prefazione"
     | "postfazione"
-    | "di_acque"
-    | "di_amori"
-    | "di_terre";
+    | "di acque"
+    | "di amori"
+    | "di terre";
 }
 
 const book = {
@@ -23,11 +23,11 @@ const book = {
   },
   diAmori: {
     title: "Di Amori",
-    pages: DiAmori as Page[],
+    pages: diAmori as Page[],
   },
   diTerre: {
     title: "Di Terre",
-    pages: DiTerre as Page[],
+    pages: diTerre as Page[],
   },
   indice: {
     title: "Indice",
@@ -40,11 +40,11 @@ const book = {
 };
 
 const bookPages = [
-  book.diAcque.pages,
-  book.diAmori.pages,
-  book.diTerre.pages,
-  book.indice.pages,
-  book.postfazione.pages,
+  ...book.indice.pages,
+  ...book.diAcque.pages,
+  ...book.diTerre.pages,
+  ...book.diAmori.pages,
+  ...book.postfazione.pages,
 ];
 
 export { book, bookPages };

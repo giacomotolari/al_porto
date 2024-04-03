@@ -1,11 +1,12 @@
-import { forwardRef, Ref } from "react";
+import { forwardRef, ReactNode, Ref } from "react";
+import "./page_flip.scss";
 
 interface PageProps {
   pageIndex: number;
   poem: any;
-  addLike: () => void;
-  alert: string;
-  text: string;
+  // addLike: () => void;
+  // alert: string;
+  text: ReactNode;
   pageNumber: string;
   pageDescription: string;
   title: string;
@@ -16,10 +17,10 @@ interface PageProps {
 const Page = forwardRef(
   (
     {
-      pageIndex,
-      poem,
-      addLike,
-      alert,
+      // pageIndex,
+      // poem,
+      // addLike,
+      // alert,
       text,
       pageNumber,
       pageDescription,
@@ -33,7 +34,7 @@ const Page = forwardRef(
       <div className="Page" id={idStyle} ref={ref}>
         <div className="imgTitleLikeCounteriner">
           <h2 style={{ marginLeft: titleMargin }}>{title} </h2>
-          {pageIndex === 0 &&
+          {/* {pageIndex === 0 &&
             poem.description !== "prefazione" &&
             poem.description !== "postfazione" &&
             poem.description !== "indice" &&
@@ -44,7 +45,7 @@ const Page = forwardRef(
                   <span className="alert">{alert}</span>
                 </button>
               </>
-            )}
+            )} */}
         </div>
         <div className="text">{text}</div>
         <p id="pageDescription">{pageDescription}</p>
